@@ -300,7 +300,7 @@ function convertVmess(proxy: ClashProxyVmess): SingboxOutboundVmess {
         proxy["grpc-opts"]["grpc-service-name"]!;
     }
   } else {
-    throw new Error("Unsupported transport tcp");
+    //throw new Error("Unsupported transport tcp");
   }
   if (proxy.udp !== undefined && proxy.udp! === false) {
     outbound.network = "tcp";
