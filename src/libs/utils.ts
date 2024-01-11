@@ -172,9 +172,9 @@ function convertShadowsocks(
     outbound.plugin = proxy.plugin!;
     outbound.plugin_opts = "";
     if (proxy["plugin-opts"] !== undefined) {
-      outbound.plugin_opts += `obfs=${proxy["plugin-opts"].mode!}`;
+      outbound.plugin_opts += `method=${proxy["plugin-opts"].mode!}`;
       if (proxy["plugin-opts"].host !== undefined) {
-        outbound.plugin_opts += `;obfs-host=${proxy["plugin-opts"].host!}`;
+        outbound.plugin_opts += `;host=${proxy["plugin-opts"].host!}`;
       }
       if (proxy.plugin === "v2ray-plugin") {
         if (
